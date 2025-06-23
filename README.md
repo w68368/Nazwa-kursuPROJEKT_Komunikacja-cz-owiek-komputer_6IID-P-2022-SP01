@@ -1,0 +1,1 @@
+# Nazwa-kursuPROJEKT_Komunikacja-cz-owiek-komputer_6IID-P-2022-SP01
