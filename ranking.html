@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StepUnity — Weekly Ranking</title>
+    <!-- Font Awesome for icons (hearts) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main design tokens / components -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+      <!-- Logo  -->
+      <a href="/" class="logo"><span>Step</span>Unity</a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="ranking.html" class="active">Ranking</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="index.html">Video</a>
+        <button class="btn-add" onclick="addVideo()">Add&nbsp;video</button>
+      </nav>
+
+      <!-- Profile dropdown -->
+      <div class="profile-dropdown">
+        <div class="profile-trigger">
+          <span class="username-link">Anastasiya</span>
+          <img class="avatar" src="https://placehold.co/38x38" alt="avatar" />
+        </div>
+        <div class="dropdown-menu">
+          <a href="profile.html">👤 Profile</a>
+          <a href="dashboard.html">📊 Dashboard</a>
+          <a href="chats.html">💬 Chats</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="logout.html">🚪 Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Decorative background stars (already used on the main feed) -->
+    <div class="stars"></div>
+
+    <!-- ===== Main content ===== -->
+    <main class="ranking-main">
+      <h1>Ranking of the Week</h1>
+
+      <!-- Ranking Filters -->
+      <div class="ranking-filters">
+        <button class="filter-btn active">This Week</button>
+        <button class="filter-btn">This Month</button>
+        <button class="filter-btn">All Time</button>
+      </div>
+
+      <div class="boards-wrapper">
+        <!-- 🏆 Individual leaderboard -->
+        <section class="board-card leader">
+          <h3>🏆 Leader board</h3>
+          <ol class="board-list">
+            <li class="board-item">
+              <span class="position">1</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Mark"
+                  />
+                  <span class="lb-name">Anastasiya B.</span>
+                  <span class="badges">💎🔥</span>
+                </span>
+                <span class="lb-points">
+                  51000 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+1800 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">2</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Eliza"
+                  />
+                  <span class="lb-name">Eliza G.</span>
+                  <span class="badges">🔥</span>
+                </span>
+                <span class="lb-points">
+                  50800 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+1500 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">3</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Alex"
+                  />
+                  <span class="lb-name">Alex F.</span>
+                </span>
+                <span class="lb-points">
+                  50030 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+1320 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">4</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Lina"
+                  />
+                  <span class="lb-name">Lina D.</span>
+                  <span class="badges">⭐</span>
+                </span>
+                <span class="lb-points">
+                  49400 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+1260 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">5</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Derek"
+                  />
+                  <span class="lb-name">Derek V.</span>
+                </span>
+                <span class="lb-points">
+                  48220 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+1150 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">6</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Aiko"
+                  />
+                  <span class="lb-name">Aiko M.</span>
+                </span>
+                <span class="lb-points">
+                  47610 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+990 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">7</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Tommy"
+                  />
+                  <span class="lb-name">Tommy Q.</span>
+                </span>
+                <span class="lb-points">
+                  47240 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+880 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">8</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Nora"
+                  />
+                  <span class="lb-name">Nora L.</span>
+                </span>
+                <span class="lb-points">
+                  47000 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+850 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">9</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Leo"
+                  />
+                  <span class="lb-name">Leo B.</span>
+                </span>
+                <span class="lb-points">
+                  46850 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+810 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">10</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Ivy"
+                  />
+                  <span class="lb-name">Ivy K.</span>
+                </span>
+                <span class="lb-points">
+                  46700 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+770 this week</span>
+                </span>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 👥 Team leaderboard ---------------------------------------- -->
+        <section class="board-card team">
+          <h3>👥 Team board</h3>
+          <ol class="board-list">
+            <li class="board-item">
+              <span class="position">1</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Slam Jam"
+                  />
+                  <span class="lb-name">Slam Jam</span>
+                  <span class="badges">⭐</span>
+                </span>
+                <span class="lb-points">
+                  91000 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+4200 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">2</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="The Cypher Crew"
+                  />
+                  <span class="lb-name">The Cypher Crew</span>
+                </span>
+                <span class="lb-points">
+                  89030 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+3890 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">3</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Power Choreo"
+                  />
+                  <span class="lb-name">Power Choreo</span>
+                </span>
+                <span class="lb-points">
+                  85900 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+3270 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">4</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Urban Pulse"
+                  />
+                  <span class="lb-name">Urban Pulse</span>
+                  <span class="badges">💥</span>
+                </span>
+                <span class="lb-points">
+                  84300 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+3100 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">5</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="NeoMotion"
+                  />
+                  <span class="lb-name">NeoMotion</span>
+                </span>
+                <span class="lb-points">
+                  82020 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2850 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">6</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Hype Syndicate"
+                  />
+                  <span class="lb-name">Hype Syndicate</span>
+                </span>
+                <span class="lb-points">
+                  79880 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2690 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">7</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Groove Mechanics"
+                  />
+                  <span class="lb-name">Groove Mechanics</span>
+                </span>
+                <span class="lb-points">
+                  78200 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2550 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">8</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="Flow Elements"
+                  />
+                  <span class="lb-name">Flow Elements</span>
+                </span>
+                <span class="lb-points">
+                  76540 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2410 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">9</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="BeatFreakz"
+                  />
+                  <span class="lb-name">BeatFreakz</span>
+                </span>
+                <span class="lb-points">
+                  74890 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2300 this week</span>
+                </span>
+              </div>
+            </li>
+            <li class="board-item">
+              <span class="position">10</span>
+              <div class="pill">
+                <span class="name-wrapper">
+                  <img
+                    src="https://placehold.co/28x28"
+                    class="lb-avatar"
+                    alt="NextStep Fam"
+                  />
+                  <span class="lb-name">NextStep Fam</span>
+                </span>
+                <span class="lb-points">
+                  73000 <i class="fa-regular fa-heart"></i>
+                  <span class="lb-growth">+2150 this week</span>
+                </span>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content compact">
+        <div class="footer-logo">
+          <a href="/" class="logo"><span>Step</span>Unity</a>
+          <p class="tagline">Where Dancers Connect, Compete & Create.</p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Video Feed</a></li>
+              <li><a href="ranking.html">Weekly Ranking</a></li>
+              <li><a href="challenges.html">Challenges</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 StepUnity. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="js/main.js"></script>
+</html>

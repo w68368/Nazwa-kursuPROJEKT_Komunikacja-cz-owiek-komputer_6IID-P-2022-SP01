@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – StepUnity</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="/" class="logo"><span>Step</span>Unity</a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="ranking.html">Ranking</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="index.html">Video</a>
+        <button class="btn-add" onclick="addVideo()">Add&nbsp;video</button>
+      </nav>
+
+      <!-- Profile dropdown -->
+      <div class="profile-dropdown">
+        <div class="profile-trigger">
+          <span class="username-link">Anastasiya</span>
+          <img class="avatar" src="https://placehold.co/38x38" alt="avatar" />
+        </div>
+        <div class="dropdown-menu">
+          <a href="profile.html">👤 Profile</a>
+          <a href="dashboard.html">📊 Dashboard</a>
+          <a href="chats.html">💬 Chats</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="logout.html">🚪 Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Decorative background -->
+    <div class="stars"></div>
+
+    <!-- ====== Main Dashboard Content ====== -->
+    <main class="dashboard">
+      <!-- Welcome message -->
+      <h1>Hello, Anastasiya!</h1>
+
+      <!-- Upcoming training sessions -->
+      <h3 class="section-title">
+        <i class="fa-regular fa-calendar-check"></i> Upcoming training sessions:
+      </h3>
+      <div class="sessions-wrapper">
+        <!-- Each training session -->
+        <div class="session-card">
+          Thursday 5:00 PM | Studio Move
+          <div class="session-actions">
+            <button title="View on map">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <button title="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+          <button class="close-btn" aria-label="Remove session">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="session-card">
+          Friday 5:00 PM | Studio Move
+          <div class="session-actions">
+            <button title="View on map">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <button title="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+          <button class="close-btn" aria-label="Remove session">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active dance challenges -->
+      <h3 class="section-title">
+        <i class="fa-solid fa-star"></i> Active challenges:
+      </h3>
+      <div class="challenges-grid">
+        <div class="challenge-block">
+          <select class="challenge-select">
+            <option>Queen of the Heels 👠</option>
+          </select>
+          <div class="challenge-description">
+            Show off your heel skills in a powerful 30-second routine.
+          </div>
+          <div class="challenge-video">📹 Upload your performance here</div>
+        </div>
+
+        <div class="challenge-block">
+          <select class="challenge-select">
+            <option>Urban Flow Battle</option>
+          </select>
+          <div class="challenge-description">
+            Freestyle battle with urban grooves. Surprise us!
+          </div>
+          <div class="challenge-video">📹 Upload your performance here</div>
+        </div>
+      </div>
+
+      <!-- Leaderboard preview -->
+      <h3 class="section-title" style="margin-top: 2.8rem">
+        <i class="fa-solid fa-ranking-star"></i> Ranking of the Week:
+      </h3>
+      <div class="leaderboard-card">
+        <h4>Leader board</h4>
+
+        <!-- Leaderboard rows -->
+        <div class="lb-row">
+          <div class="lb-name">
+            <span>1</span>
+            <img
+              class="lb-avatar"
+              src="https://placehold.co/24x24"
+              alt="Anna"
+            />
+            <span>Anastasiya B.</span>
+          </div>
+          <span class="lb-points"
+            >59 000 <i class="fa-regular fa-heart"></i
+          ></span>
+        </div>
+
+        <div class="lb-row">
+          <div class="lb-name">
+            <span>2</span>
+            <img
+              class="lb-avatar"
+              src="https://placehold.co/24x24"
+              alt="Eliza"
+            />
+            <span>Eliza G.</span>
+          </div>
+          <span class="lb-points"
+            >50 000 <i class="fa-regular fa-heart"></i
+          ></span>
+        </div>
+
+        <div class="lb-row">
+          <div class="lb-name">
+            <span>3</span>
+            <img
+              class="lb-avatar"
+              src="https://placehold.co/24x24"
+              alt="Niko"
+            />
+            <span>Niko F.</span>
+          </div>
+          <span class="lb-points"
+            >35 000 <i class="fa-regular fa-heart"></i
+          ></span>
+        </div>
+
+        <div class="lb-row">
+          <div class="lb-name">
+            <span>4</span>
+            <img
+              class="lb-avatar"
+              src="https://placehold.co/24x24"
+              alt="Sofi"
+            />
+            <span>Sofi L.</span>
+          </div>
+          <span class="lb-points"
+            >30 000 <i class="fa-regular fa-heart"></i
+          ></span>
+        </div>
+
+        <div class="lb-row">
+          <div class="lb-name">
+            <span>5</span>
+            <img
+              class="lb-avatar"
+              src="https://placehold.co/24x24"
+              alt="Kira"
+            />
+            <span>Kira D.</span>
+          </div>
+          <span class="lb-points"
+            >25 000 <i class="fa-regular fa-heart"></i
+          ></span>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer">
+      <div class="footer-content compact">
+        <!-- Footer logo & tagline -->
+        <div class="footer-logo">
+          <a href="/" class="logo"><span>Step</span>Unity</a>
+          <p class="tagline">Where Dancers Connect, Compete & Create.</p>
+        </div>
+
+        <!-- Footer links -->
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Video Feed</a></li>
+              <li><a href="ranking.html">Weekly Ranking</a></li>
+              <li><a href="challenges.html">Challenges</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 StepUnity. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StepUnity · Settings</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="/" class="logo"><span>Step</span>Unity</a>
+
+      <!-- Main navigation -->
+      <nav class="nav">
+        <a href="ranking.html">Ranking</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="index.html">Video</a>
+        <button class="btn-add" onclick="addVideo()">Add&nbsp;video</button>
+      </nav>
+
+      <!-- Profile dropdown -->
+      <div class="profile-dropdown">
+        <div class="profile-trigger">
+          <span class="username-link">Anastasiya</span>
+          <img class="avatar" src="https://placehold.co/38x38" alt="avatar" />
+        </div>
+        <div class="dropdown-menu">
+          <a href="profile.html">👤 Profile</a>
+          <a href="dashboard.html">📊 Dashboard</a>
+          <a href="chats.html">💬 Chats</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="logout.html">🚪 Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Decorative background stars -->
+    <div class="stars"></div>
+
+    <!-- ====== Main Settings Content ====== -->
+    <main class="settings-container">
+      <h2><i class="fa-solid fa-gear"></i> Settings</h2>
+
+      <!-- Profile picture upload -->
+      <div class="setting-group">
+        <label for="avatar">Profile Picture</label>
+        <div class="avatar-preview">
+          <img
+            id="avatar-preview"
+            src="https://placehold.co/64x64"
+            alt="Preview"
+          />
+          <input type="file" id="avatar" accept="image/*" />
+        </div>
+      </div>
+
+      <!-- Display name -->
+      <div class="setting-group">
+        <label for="username">Display Name</label>
+        <input type="text" id="username" value="Anastasiya" />
+      </div>
+
+      <!-- Email -->
+      <div class="setting-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" value="anastasiya@example.com" />
+      </div>
+
+      <!-- Language selector -->
+      <div class="setting-group">
+        <label for="language">Language</label>
+        <select id="language">
+          <option selected>English</option>
+          <option>Polski</option>
+          <option>Українська</option>
+        </select>
+      </div>
+
+      <!-- Email notifications -->
+      <div class="setting-group">
+        <label for="notifications">Email Notifications</label>
+        <select id="notifications">
+          <option selected>Enabled</option>
+          <option>Disabled</option>
+        </select>
+      </div>
+
+      <!-- Theme selector -->
+      <div class="setting-group">
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="dark" selected>Dark Mode</option>
+          <option value="light">Light Mode</option>
+        </select>
+      </div>
+
+      <!-- Save button -->
+      <button class="save-btn">Save Changes</button>
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer">
+      <div class="footer-content compact">
+        <!-- Footer logo & tagline -->
+        <div class="footer-logo">
+          <a href="/" class="logo"><span>Step</span>Unity</a>
+          <p class="tagline">Where Dancers Connect, Compete & Create.</p>
+        </div>
+
+        <!-- Footer links -->
+        <div class="footer-links">
+          <!-- Explore -->
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Video Feed</a></li>
+              <li><a href="ranking.html">Weekly Ranking</a></li>
+              <li><a href="challenges.html">Challenges</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+
+          <!-- Socials -->
+          <div>
+            <h4>Follow</h4>
+            <div class="footer-socials">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 StepUnity. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

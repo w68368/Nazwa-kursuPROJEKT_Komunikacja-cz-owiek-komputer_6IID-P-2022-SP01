@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StepUnity</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="/" class="logo"><span>Step</span>Unity</a>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="ranking.html">Ranking</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="index.html" class="active">Video</a>
+        <button class="btn-add" onclick="addVideo()">Add&nbsp;video</button>
+      </nav>
+
+      <!-- Profile dropdown -->
+      <div class="profile-dropdown">
+        <div class="profile-trigger">
+          <span class="username-link">Anastasiya</span>
+          <img class="avatar" src="https://placehold.co/38x38" alt="avatar" />
+        </div>
+        <div class="dropdown-menu">
+          <a href="profile.html">👤 Profile</a>
+          <a href="dashboard.html">📊 Dashboard</a>
+          <a href="chats.html">💬 Chats</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="logout.html">🚪 Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Background stars effect -->
+    <div class="stars"></div>
+
+    <main>
+      <!-- ====== Video Feed Section ====== -->
+      <section class="feed">
+        <h2>Recommendations</h2>
+
+        <!-- Filters -->
+        <div class="feed-filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Hip-Hop</button>
+          <button class="filter-btn">Contemporary</button>
+          <button class="filter-btn">Heels</button>
+          <button class="filter-btn">Trending</button>
+          <button class="filter-btn">New</button>
+        </div>
+
+        <!-- Post 1 -->
+        <div class="post">
+          <div class="post-header">
+            <img
+              class="avatar"
+              src="https://placehold.co/32x32"
+              alt="User avatar"
+            />
+            <span class="username">Anastasiya B.</span>
+          </div>
+          <div class="post-media">
+            <img src="images/dancer-high-heels.png" alt="Dance photo" />
+          </div>
+          <div class="post-actions">
+            <button class="icon-btn" aria-label="Like">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="icon-btn" aria-label="Comment">
+              <i class="fa-regular fa-comment-dots"></i>
+            </button>
+            <button class="icon-btn save" aria-label="Save">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+          <div class="post-header">
+            <img
+              class="avatar"
+              src="https://placehold.co/32x32"
+              alt="User avatar"
+            />
+            <span class="username">Liza A.</span>
+          </div>
+          <div class="post-media">
+            <video src="video/high_heels_video.mp4" controls></video>
+          </div>
+          <div class="post-actions">
+            <button class="icon-btn" aria-label="Like">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="icon-btn" aria-label="Comment">
+              <i class="fa-regular fa-comment-dots"></i>
+            </button>
+            <button class="icon-btn save" aria-label="Save">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post">
+          <div class="post-header">
+            <img
+              class="avatar"
+              src="https://placehold.co/32x32"
+              alt="User avatar"
+            />
+            <span class="username">Bella G.</span>
+          </div>
+          <div class="post-media">
+            <img src="images/hip_hop_dancer.png" alt="Dance photo" />
+          </div>
+          <div class="post-actions">
+            <button class="icon-btn" aria-label="Like">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="icon-btn" aria-label="Comment">
+              <i class="fa-regular fa-comment-dots"></i>
+            </button>
+            <button class="icon-btn save" aria-label="Save">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== Upcoming Events Sidebar ====== -->
+      <aside class="sidebar right events-sidebar">
+        <h3>Upcoming Events</h3>
+        <div class="event-card">
+          <strong>🔥 Hip-Hop Workshop</strong>
+          <div>20 June – Warsaw</div>
+        </div>
+        <div class="event-card">
+          <strong>🎬 Freestyle Jam</strong>
+          <div>25 June – Kraków</div>
+        </div>
+        <div class="event-card">
+          <strong>🌟 Showcase Night</strong>
+          <div>30 June – Gdańsk</div>
+        </div>
+      </aside>
+
+      <!-- ====== Top Dancers Sidebar ====== -->
+      <aside class="sidebar right top-dancers-sidebar">
+        <h3>Top Dancers</h3>
+
+        <div class="dancer-card">
+          <img
+            src="https://placehold.co/36x36"
+            alt="Anna"
+            class="dancer-avatar"
+          />
+          <div class="dancer-info">
+            <strong>Anastasiya B.</strong>
+            <div class="rank">🥇 1540 pts</div>
+          </div>
+        </div>
+
+        <div class="dancer-card">
+          <img
+            src="https://placehold.co/36x36"
+            alt="Eliza"
+            class="dancer-avatar"
+          />
+          <div class="dancer-info">
+            <strong>Eliza G.</strong>
+            <div class="rank">🥈 1430 pts</div>
+          </div>
+        </div>
+
+        <div class="dancer-card">
+          <img
+            src="https://placehold.co/36x36"
+            alt="Mark"
+            class="dancer-avatar"
+          />
+          <div class="dancer-info">
+            <strong>Mark R.</strong>
+            <div class="rank">🥉 1370 pts</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer class="site-footer">
+      <div class="footer-content compact">
+        <div class="footer-logo">
+          <a href="/" class="logo"><span>Step</span>Unity</a>
+          <p class="tagline">Where Dancers Connect, Compete & Create.</p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Video Feed</a></li>
+              <li><a href="ranking.html">Weekly Ranking</a></li>
+              <li><a href="challenges.html">Challenges</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
